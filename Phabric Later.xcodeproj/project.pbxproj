@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		637362E31B09365800B71618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637362E21B09365800B71618 /* AppDelegate.swift */; };
+		637362E51B09365800B71618 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637362E41B09365800B71618 /* ViewController.swift */; };
+		637362E81B09365800B71618 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637362E61B09365800B71618 /* Main.storyboard */; };
+		637362EA1B09365800B71618 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 637362E91B09365800B71618 /* Images.xcassets */; };
+		637362ED1B09365800B71618 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637362EB1B09365800B71618 /* LaunchScreen.xib */; };
+		637362F91B09365800B71618 /* Phabric_LaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637362F81B09365800B71618 /* Phabric_LaterTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		637362F31B09365800B71618 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 637362D51B09365800B71618 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 637362DC1B09365800B71618;
+			remoteInfo = "Phabric Later";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		637362DD1B09365800B71618 /* Phabric Later.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Phabric Later.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		637362E11B09365800B71618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		637362E21B09365800B71618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		637362E41B09365800B71618 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		637362E71B09365800B71618 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		637362E91B09365800B71618 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		637362EC1B09365800B71618 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		637362F21B09365800B71618 /* Phabric LaterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Phabric LaterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		637362F71B09365800B71618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		637362F81B09365800B71618 /* Phabric_LaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phabric_LaterTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		637362DA1B09365800B71618 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		637362EF1B09365800B71618 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		637362D41B09365800B71618 = {
+			isa = PBXGroup;
+			children = (
+				637362DF1B09365800B71618 /* Phabric Later */,
+				637362F51B09365800B71618 /* Phabric LaterTests */,
+				637362DE1B09365800B71618 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		637362DE1B09365800B71618 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				637362DD1B09365800B71618 /* Phabric Later.app */,
+				637362F21B09365800B71618 /* Phabric LaterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		637362DF1B09365800B71618 /* Phabric Later */ = {
+			isa = PBXGroup;
+			children = (
+				637362E21B09365800B71618 /* AppDelegate.swift */,
+				637362E41B09365800B71618 /* ViewController.swift */,
+				637362E61B09365800B71618 /* Main.storyboard */,
+				637362E91B09365800B71618 /* Images.xcassets */,
+				637362EB1B09365800B71618 /* LaunchScreen.xib */,
+				637362E01B09365800B71618 /* Supporting Files */,
+			);
+			path = "Phabric Later";
+			sourceTree = "<group>";
+		};
+		637362E01B09365800B71618 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				637362E11B09365800B71618 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		637362F51B09365800B71618 /* Phabric LaterTests */ = {
+			isa = PBXGroup;
+			children = (
+				637362F81B09365800B71618 /* Phabric_LaterTests.swift */,
+				637362F61B09365800B71618 /* Supporting Files */,
+			);
+			path = "Phabric LaterTests";
+			sourceTree = "<group>";
+		};
+		637362F61B09365800B71618 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				637362F71B09365800B71618 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		637362DC1B09365800B71618 /* Phabric Later */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 637362FC1B09365800B71618 /* Build configuration list for PBXNativeTarget "Phabric Later" */;
+			buildPhases = (
+				637362D91B09365800B71618 /* Sources */,
+				637362DA1B09365800B71618 /* Frameworks */,
+				637362DB1B09365800B71618 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Phabric Later";
+			productName = "Phabric Later";
+			productReference = 637362DD1B09365800B71618 /* Phabric Later.app */;
+			productType = "com.apple.product-type.application";
+		};
+		637362F11B09365800B71618 /* Phabric LaterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 637362FF1B09365800B71618 /* Build configuration list for PBXNativeTarget "Phabric LaterTests" */;
+			buildPhases = (
+				637362EE1B09365800B71618 /* Sources */,
+				637362EF1B09365800B71618 /* Frameworks */,
+				637362F01B09365800B71618 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				637362F41B09365800B71618 /* PBXTargetDependency */,
+			);
+			name = "Phabric LaterTests";
+			productName = "Phabric LaterTests";
+			productReference = 637362F21B09365800B71618 /* Phabric LaterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		637362D51B09365800B71618 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "David Lundgren";
+				TargetAttributes = {
+					637362DC1B09365800B71618 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					637362F11B09365800B71618 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 637362DC1B09365800B71618;
+					};
+				};
+			};
+			buildConfigurationList = 637362D81B09365800B71618 /* Build configuration list for PBXProject "Phabric Later" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 637362D41B09365800B71618;
+			productRefGroup = 637362DE1B09365800B71618 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				637362DC1B09365800B71618 /* Phabric Later */,
+				637362F11B09365800B71618 /* Phabric LaterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		637362DB1B09365800B71618 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				637362E81B09365800B71618 /* Main.storyboard in Resources */,
+				637362ED1B09365800B71618 /* LaunchScreen.xib in Resources */,
+				637362EA1B09365800B71618 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		637362F01B09365800B71618 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		637362D91B09365800B71618 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				637362E51B09365800B71618 /* ViewController.swift in Sources */,
+				637362E31B09365800B71618 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		637362EE1B09365800B71618 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				637362F91B09365800B71618 /* Phabric_LaterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		637362F41B09365800B71618 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 637362DC1B09365800B71618 /* Phabric Later */;
+			targetProxy = 637362F31B09365800B71618 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		637362E61B09365800B71618 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				637362E71B09365800B71618 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		637362EB1B09365800B71618 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				637362EC1B09365800B71618 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		637362FA1B09365800B71618 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		637362FB1B09365800B71618 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		637362FD1B09365800B71618 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Phabric Later/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		637362FE1B09365800B71618 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Phabric Later/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		637363001B09365800B71618 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Phabric LaterTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phabric Later.app/Phabric Later";
+			};
+			name = Debug;
+		};
+		637363011B09365800B71618 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Phabric LaterTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phabric Later.app/Phabric Later";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		637362D81B09365800B71618 /* Build configuration list for PBXProject "Phabric Later" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				637362FA1B09365800B71618 /* Debug */,
+				637362FB1B09365800B71618 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		637362FC1B09365800B71618 /* Build configuration list for PBXNativeTarget "Phabric Later" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				637362FD1B09365800B71618 /* Debug */,
+				637362FE1B09365800B71618 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		637362FF1B09365800B71618 /* Build configuration list for PBXNativeTarget "Phabric LaterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				637363001B09365800B71618 /* Debug */,
+				637363011B09365800B71618 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 637362D51B09365800B71618 /* Project object */;
+}
