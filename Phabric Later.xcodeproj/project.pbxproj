@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16C8EF1CE260D3E05D72C8C3 /* libPods-Phabric Later.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC74C2557FBC87141F8B9CF /* libPods-Phabric Later.a */; };
+		636B1DFB1B0959AA0066422A /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B1DFA1B0959AA0066422A /* TasksViewController.swift */; };
+		636B1DFE1B095B700066422A /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B1DFD1B095B700066422A /* TaskTableViewCell.swift */; };
 		637362E31B09365800B71618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637362E21B09365800B71618 /* AppDelegate.swift */; };
-		637362E51B09365800B71618 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637362E41B09365800B71618 /* ViewController.swift */; };
+		637362E51B09365800B71618 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637362E41B09365800B71618 /* LoginViewController.swift */; };
 		637362E81B09365800B71618 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637362E61B09365800B71618 /* Main.storyboard */; };
 		637362EA1B09365800B71618 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 637362E91B09365800B71618 /* Images.xcassets */; };
 		637362ED1B09365800B71618 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637362EB1B09365800B71618 /* LaunchScreen.xib */; };
@@ -26,16 +29,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0EC74C2557FBC87141F8B9CF /* libPods-Phabric Later.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Phabric Later.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		636B1DFA1B0959AA0066422A /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		636B1DFD1B095B700066422A /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		637362DD1B09365800B71618 /* Phabric Later.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Phabric Later.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		637362E11B09365800B71618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		637362E21B09365800B71618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		637362E41B09365800B71618 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		637362E41B09365800B71618 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		637362E71B09365800B71618 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		637362E91B09365800B71618 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		637362EC1B09365800B71618 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		637362F21B09365800B71618 /* Phabric LaterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Phabric LaterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		637362F71B09365800B71618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		637362F81B09365800B71618 /* Phabric_LaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phabric_LaterTests.swift; sourceTree = "<group>"; };
+		A80ECE170C953F0A91700E2F /* Pods-Phabric Later.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phabric Later.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Phabric Later/Pods-Phabric Later.debug.xcconfig"; sourceTree = "<group>"; };
+		B30E88FCBFD341E2D23A495D /* Pods-Phabric Later.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phabric Later.release.xcconfig"; path = "Pods/Target Support Files/Pods-Phabric Later/Pods-Phabric Later.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16C8EF1CE260D3E05D72C8C3 /* libPods-Phabric Later.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +65,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		636B1DF91B09597C0066422A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				637362E41B09365800B71618 /* LoginViewController.swift */,
+				636B1DFA1B0959AA0066422A /* TasksViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		636B1DFC1B095B5C0066422A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				636B1DFD1B095B700066422A /* TaskTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		637362D41B09365800B71618 = {
 			isa = PBXGroup;
 			children = (
 				637362DF1B09365800B71618 /* Phabric Later */,
 				637362F51B09365800B71618 /* Phabric LaterTests */,
 				637362DE1B09365800B71618 /* Products */,
+				919C3803D19609D3214A0091 /* Pods */,
+				74CE0089CDD4C609E7BC71E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,8 +105,9 @@
 		637362DF1B09365800B71618 /* Phabric Later */ = {
 			isa = PBXGroup;
 			children = (
+				636B1DFC1B095B5C0066422A /* Views */,
+				636B1DF91B09597C0066422A /* View Controllers */,
 				637362E21B09365800B71618 /* AppDelegate.swift */,
-				637362E41B09365800B71618 /* ViewController.swift */,
 				637362E61B09365800B71618 /* Main.storyboard */,
 				637362E91B09365800B71618 /* Images.xcassets */,
 				637362EB1B09365800B71618 /* LaunchScreen.xib */,
@@ -112,6 +141,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		74CE0089CDD4C609E7BC71E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0EC74C2557FBC87141F8B9CF /* libPods-Phabric Later.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		919C3803D19609D3214A0091 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A80ECE170C953F0A91700E2F /* Pods-Phabric Later.debug.xcconfig */,
+				B30E88FCBFD341E2D23A495D /* Pods-Phabric Later.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 637362FC1B09365800B71618 /* Build configuration list for PBXNativeTarget "Phabric Later" */;
 			buildPhases = (
+				3C24C9D0ACC0B6E96DA0918A /* Check Pods Manifest.lock */,
 				637362D91B09365800B71618 /* Sources */,
 				637362DA1B09365800B71618 /* Frameworks */,
 				637362DB1B09365800B71618 /* Resources */,
+				7F3AB3826B1BE239FDBEEAAE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,13 +255,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3C24C9D0ACC0B6E96DA0918A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7F3AB3826B1BE239FDBEEAAE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Phabric Later/Pods-Phabric Later-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		637362D91B09365800B71618 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				637362E51B09365800B71618 /* ViewController.swift in Sources */,
+				636B1DFE1B095B700066422A /* TaskTableViewCell.swift in Sources */,
+				637362E51B09365800B71618 /* LoginViewController.swift in Sources */,
 				637362E31B09365800B71618 /* AppDelegate.swift in Sources */,
+				636B1DFB1B0959AA0066422A /* TasksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,21 +421,25 @@
 		};
 		637362FD1B09365800B71618 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A80ECE170C953F0A91700E2F /* Pods-Phabric Later.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Phabric Later/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		637362FE1B09365800B71618 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B30E88FCBFD341E2D23A495D /* Pods-Phabric Later.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Phabric Later/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -409,6 +496,7 @@
 				637362FE1B09365800B71618 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		637362FF1B09365800B71618 /* Build configuration list for PBXNativeTarget "Phabric LaterTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +505,7 @@
 				637363011B09365800B71618 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
