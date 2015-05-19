@@ -32,8 +32,9 @@ class TasksViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func taskTableViewCell(taskTableViewCell: TaskTableViewCell, didSwipe value: Bool) {
         if let tableIndex = self.tasksTableView.indexPathForCell(taskTableViewCell)?.row {
-            var task = self.tasks[tableIndex]
+//            var task = self.tasks[tableIndex]
             // XXX: Do some stuff with the task given that it's been swiped
+            println("finished swiping in Delegate Function at index \(tableIndex)")
         }
         
     }
