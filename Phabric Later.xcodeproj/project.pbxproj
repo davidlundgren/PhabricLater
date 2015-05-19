@@ -17,6 +17,7 @@
 		637362F91B09365800B71618 /* Phabric_LaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637362F81B09365800B71618 /* Phabric_LaterTests.swift */; };
 		63F29B061B096C3C001E72C8 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F29B051B096C3C001E72C8 /* Task.swift */; };
 		63F29B081B096EDB001E72C8 /* PhabricatorClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F29B071B096EDB001E72C8 /* PhabricatorClient.swift */; };
+		FBB29D995698FF50C586A1AC /* libPods-Phabric Later.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC74C2557FBC87141F8B9CF /* libPods-Phabric Later.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBB29D995698FF50C586A1AC /* libPods-Phabric Later.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

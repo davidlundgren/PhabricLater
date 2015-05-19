@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -85,13 +85,14 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jJ3-lJ-DJP" id="eoY-4o-MgV">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-avatar" translatesAutoresizingMaskIntoConstraints="NO" id="MzF-I1-89H">
-                                                    <rect key="frame" x="8" y="10" width="50" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="WSN-lP-RSh"/>
-                                                        <constraint firstAttribute="width" constant="50" id="yXj-Ln-UlU"/>
-                                                    </constraints>
-                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sXa-6K-ljL" userLabel="Bottom Background View">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Up6-Uo-lnU" userLabel="Top Layer Background">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Using Decorator for Selector Cache" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMB-Pz-O9z">
                                                     <rect key="frame" x="66" y="10" width="204" height="17"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="12"/>
@@ -104,23 +105,54 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-avatar" translatesAutoresizingMaskIntoConstraints="NO" id="MzF-I1-89H">
+                                                    <rect key="frame" x="8" y="10" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="WSN-lP-RSh"/>
+                                                        <constraint firstAttribute="width" constant="50" id="yXj-Ln-UlU"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="KMB-Pz-O9z" firstAttribute="leading" secondItem="MzF-I1-89H" secondAttribute="trailing" constant="8" id="26J-qu-jrS"/>
                                                 <constraint firstItem="MzF-I1-89H" firstAttribute="top" secondItem="eoY-4o-MgV" secondAttribute="top" constant="10" id="7Av-iO-MSs"/>
+                                                <constraint firstItem="sXa-6K-ljL" firstAttribute="top" secondItem="eoY-4o-MgV" secondAttribute="top" id="7g5-qi-xBF"/>
+                                                <constraint firstAttribute="bottom" secondItem="sXa-6K-ljL" secondAttribute="bottom" id="8iq-Vr-08t"/>
+                                                <constraint firstItem="sXa-6K-ljL" firstAttribute="leading" secondItem="eoY-4o-MgV" secondAttribute="leading" id="Aby-xn-XhQ"/>
+                                                <constraint firstItem="Up6-Uo-lnU" firstAttribute="leading" secondItem="eoY-4o-MgV" secondAttribute="leading" id="Dk8-pE-IVd"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="0K2-oL-Lgd" secondAttribute="bottom" constant="8" id="EzH-GA-jB3"/>
+                                                <constraint firstAttribute="bottom" secondItem="Up6-Uo-lnU" secondAttribute="bottom" id="I8b-T0-KcN"/>
+                                                <constraint firstAttribute="trailing" secondItem="Up6-Uo-lnU" secondAttribute="trailing" id="JSu-xL-3L8"/>
+                                                <constraint firstAttribute="trailing" secondItem="Up6-Uo-lnU" secondAttribute="trailing" id="MnF-2t-SBn"/>
                                                 <constraint firstItem="0K2-oL-Lgd" firstAttribute="leading" secondItem="MzF-I1-89H" secondAttribute="trailing" constant="8" id="OZu-2e-Tww"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0K2-oL-Lgd" secondAttribute="trailing" constant="8" id="QaI-OD-OEH"/>
+                                                <constraint firstItem="Up6-Uo-lnU" firstAttribute="top" secondItem="eoY-4o-MgV" secondAttribute="top" id="WCB-xu-BDo"/>
                                                 <constraint firstItem="0K2-oL-Lgd" firstAttribute="leading" secondItem="MzF-I1-89H" secondAttribute="trailing" constant="8" id="Ych-As-xdn"/>
+                                                <constraint firstItem="Up6-Uo-lnU" firstAttribute="top" secondItem="eoY-4o-MgV" secondAttribute="top" id="b40-np-2Lm"/>
                                                 <constraint firstItem="MzF-I1-89H" firstAttribute="leading" secondItem="eoY-4o-MgV" secondAttribute="leading" constant="8" id="bbx-xD-wvo"/>
+                                                <constraint firstAttribute="trailing" secondItem="sXa-6K-ljL" secondAttribute="trailing" id="emX-Gj-4xg"/>
                                                 <constraint firstItem="0K2-oL-Lgd" firstAttribute="top" secondItem="KMB-Pz-O9z" secondAttribute="bottom" constant="5" id="hAA-IY-6W9"/>
+                                                <constraint firstAttribute="bottom" secondItem="sXa-6K-ljL" secondAttribute="bottom" id="hqD-fV-Efy"/>
+                                                <constraint firstAttribute="bottom" secondItem="Up6-Uo-lnU" secondAttribute="bottom" id="hyg-az-GaP"/>
+                                                <constraint firstItem="sXa-6K-ljL" firstAttribute="top" secondItem="eoY-4o-MgV" secondAttribute="top" id="jRh-CP-TiI"/>
+                                                <constraint firstItem="sXa-6K-ljL" firstAttribute="leading" secondItem="eoY-4o-MgV" secondAttribute="leading" id="jvJ-Cp-rJ0"/>
                                                 <constraint firstItem="KMB-Pz-O9z" firstAttribute="top" secondItem="MzF-I1-89H" secondAttribute="top" id="nos-n7-Q7v"/>
+                                                <constraint firstAttribute="trailing" secondItem="sXa-6K-ljL" secondAttribute="trailing" id="oxs-MW-ryj"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0K2-oL-Lgd" secondAttribute="trailing" constant="8" id="suR-9Q-FlA"/>
                                                 <constraint firstItem="0K2-oL-Lgd" firstAttribute="leading" secondItem="MzF-I1-89H" secondAttribute="trailing" constant="8" id="to9-rv-Gj9"/>
+                                                <constraint firstItem="Up6-Uo-lnU" firstAttribute="leading" secondItem="eoY-4o-MgV" secondAttribute="leading" id="xwt-9n-5QF"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="MzF-I1-89H" secondAttribute="bottom" constant="8" id="ySG-4Z-Vee"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
+                                                    <exclude reference="Dk8-pE-IVd"/>
+                                                    <exclude reference="MnF-2t-SBn"/>
+                                                    <exclude reference="b40-np-2Lm"/>
+                                                    <exclude reference="hyg-az-GaP"/>
+                                                    <exclude reference="8iq-Vr-08t"/>
+                                                    <exclude reference="Aby-xn-XhQ"/>
+                                                    <exclude reference="jRh-CP-TiI"/>
+                                                    <exclude reference="oxs-MW-ryj"/>
                                                     <exclude reference="QaI-OD-OEH"/>
                                                     <exclude reference="Ych-As-xdn"/>
                                                     <exclude reference="to9-rv-Gj9"/>
@@ -129,7 +161,9 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="avatarImageView" destination="MzF-I1-89H" id="PYx-dp-ZqG"/>
+                                            <outlet property="bottomBackgroundView" destination="sXa-6K-ljL" id="iVn-40-lBr"/>
                                             <outlet property="titleLabel" destination="KMB-Pz-O9z" id="0SV-Le-lvB"/>
+                                            <outlet property="topBackgroundView" destination="Up6-Uo-lnU" id="ftx-e3-xod"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
