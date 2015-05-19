@@ -1,11 +1,3 @@
-//
-//  TaskTableViewCell.swift
-//  Phabric Later
-//
-//  Created by David Lundgren on 5/17/15.
-//  Copyright (c) 2015 David Lundgren. All rights reserved.
-//
-
 import UIKit
 
 class TaskTableViewCell: UITableViewCell {
@@ -20,8 +12,6 @@ class TaskTableViewCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }

@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>PhabricLater.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>637362F11B09365800B71618</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>638BC81D1B09A66B00C33468</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>638BC8271B09A66B00C33468</key>
 		<dict>
 			<key>primary</key>
 			<true/>

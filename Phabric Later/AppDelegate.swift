@@ -1,21 +1,16 @@
-//
-//  AppDelegate.swift
-//  Phabric Later
-//
-//  Created by David Lundgren on 5/17/15.
-//  Copyright (c) 2015 David Lundgren. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    var storyBoard = UIStoryboard(name: "Main", bundle: nil)
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        if PhabricatorClient.currentUser != nil {
+            var vc = storyBoard.instantiateViewControllerWithIdentifier("TasksViewController") as! UIViewController
+            window?.rootViewController = vc
+        }
         return true
     }
 

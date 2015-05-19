@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		16C8EF1CE260D3E05D72C8C3 /* libPods-Phabric Later.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC74C2557FBC87141F8B9CF /* libPods-Phabric Later.a */; };
 		636B1DFB1B0959AA0066422A /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B1DFA1B0959AA0066422A /* TasksViewController.swift */; };
 		636B1DFE1B095B700066422A /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B1DFD1B095B700066422A /* TaskTableViewCell.swift */; };
 		637362E31B09365800B71618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637362E21B09365800B71618 /* AppDelegate.swift */; };
@@ -16,6 +15,8 @@
 		637362EA1B09365800B71618 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 637362E91B09365800B71618 /* Images.xcassets */; };
 		637362ED1B09365800B71618 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637362EB1B09365800B71618 /* LaunchScreen.xib */; };
 		637362F91B09365800B71618 /* Phabric_LaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637362F81B09365800B71618 /* Phabric_LaterTests.swift */; };
+		63F29B061B096C3C001E72C8 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F29B051B096C3C001E72C8 /* Task.swift */; };
+		63F29B081B096EDB001E72C8 /* PhabricatorClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F29B071B096EDB001E72C8 /* PhabricatorClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,9 @@
 		637362F21B09365800B71618 /* Phabric LaterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Phabric LaterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		637362F71B09365800B71618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		637362F81B09365800B71618 /* Phabric_LaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phabric_LaterTests.swift; sourceTree = "<group>"; };
+		63F29B051B096C3C001E72C8 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		63F29B071B096EDB001E72C8 /* PhabricatorClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhabricatorClient.swift; sourceTree = "<group>"; };
+		63F29B091B096EFC001E72C8 /* Phabric Later-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Phabric Later-Bridging-Header.h"; sourceTree = "<group>"; };
 		A80ECE170C953F0A91700E2F /* Pods-Phabric Later.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phabric Later.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Phabric Later/Pods-Phabric Later.debug.xcconfig"; sourceTree = "<group>"; };
 		B30E88FCBFD341E2D23A495D /* Pods-Phabric Later.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phabric Later.release.xcconfig"; path = "Pods/Target Support Files/Pods-Phabric Later/Pods-Phabric Later.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,7 +55,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16C8EF1CE260D3E05D72C8C3 /* libPods-Phabric Later.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +108,7 @@
 		637362DF1B09365800B71618 /* Phabric Later */ = {
 			isa = PBXGroup;
 			children = (
+				63F29B021B096BE8001E72C8 /* Phabricator */,
 				636B1DFC1B095B5C0066422A /* Views */,
 				636B1DF91B09597C0066422A /* View Controllers */,
 				637362E21B09365800B71618 /* AppDelegate.swift */,
@@ -112,6 +116,7 @@
 				637362E91B09365800B71618 /* Images.xcassets */,
 				637362EB1B09365800B71618 /* LaunchScreen.xib */,
 				637362E01B09365800B71618 /* Supporting Files */,
+				63F29B091B096EFC001E72C8 /* Phabric Later-Bridging-Header.h */,
 			);
 			path = "Phabric Later";
 			sourceTree = "<group>";
@@ -139,6 +144,15 @@
 				637362F71B09365800B71618 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63F29B021B096BE8001E72C8 /* Phabricator */ = {
+			isa = PBXGroup;
+			children = (
+				63F29B051B096C3C001E72C8 /* Task.swift */,
+				63F29B071B096EDB001E72C8 /* PhabricatorClient.swift */,
+			);
+			name = Phabricator;
 			sourceTree = "<group>";
 		};
 		74CE0089CDD4C609E7BC71E9 /* Frameworks */ = {
@@ -295,6 +309,8 @@
 			files = (
 				636B1DFE1B095B700066422A /* TaskTableViewCell.swift in Sources */,
 				637362E51B09365800B71618 /* LoginViewController.swift in Sources */,
+				63F29B081B096EDB001E72C8 /* PhabricatorClient.swift in Sources */,
+				63F29B061B096C3C001E72C8 /* Task.swift in Sources */,
 				637362E31B09365800B71618 /* AppDelegate.swift in Sources */,
 				636B1DFB1B0959AA0066422A /* TasksViewController.swift in Sources */,
 			);
@@ -424,9 +440,12 @@
 			baseConfigurationReference = A80ECE170C953F0A91700E2F /* Pods-Phabric Later.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Phabric Later/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Phabric Later/Phabric Later-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -436,9 +455,11 @@
 			baseConfigurationReference = B30E88FCBFD341E2D23A495D /* Pods-Phabric Later.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Phabric Later/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Phabric Later/Phabric Later-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

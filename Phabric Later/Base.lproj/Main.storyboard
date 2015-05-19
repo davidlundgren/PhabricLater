@@ -16,49 +16,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="david.lundgren" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R71-kY-Tdg">
-                                <rect key="frame" x="102" y="114" width="117" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="@user.name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R71-kY-Tdg">
+                                <rect key="frame" x="156" y="261" width="289" height="30"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="sdff3134lasd9f22assdff3134lasd9f22assdff3134lasd9f22assdff3134lasd9f22assdff3134lasd9f22assdff3134lasd9f22as" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RzA-3R-OFb">
-                                <rect key="frame" x="35" y="299" width="531" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="#certificate" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RzA-3R-OFb">
+                                <rect key="frame" x="156" y="299" width="289" height="30"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Certificate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FZ-hc-fMM">
-                                <rect key="frame" x="121" y="270" width="79" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkh-gQ-Vr7">
-                                <rect key="frame" x="277" y="472" width="38" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://phabricator.host" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jcT-JE-cB0">
+                                <rect key="frame" x="156" y="223" width="289" height="30"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" alpha="0.49999999999999961" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkh-gQ-Vr7">
+                                <rect key="frame" x="156" y="337" width="289" height="33"/>
+                                <color key="backgroundColor" red="0.36807904184464879" green="0.76753627299226723" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
                                 <state key="normal" title="Login">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="vKh-Ox-HHx" kind="presentation" id="dec-yU-3h6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlI-4t-YS0">
-                                <rect key="frame" x="121" y="85" width="79" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="R71-kY-Tdg" secondAttribute="centerX" id="K7e-jc-I3l"/>
+                            <constraint firstAttribute="centerX" secondItem="R71-kY-Tdg" secondAttribute="centerX" id="RPD-68-Oti"/>
+                            <constraint firstAttribute="centerX" secondItem="hkh-gQ-Vr7" secondAttribute="centerX" id="bc0-KF-DdB"/>
+                            <constraint firstAttribute="centerX" secondItem="RzA-3R-OFb" secondAttribute="centerX" id="fxb-gf-X1v"/>
+                            <constraint firstAttribute="centerX" secondItem="jcT-JE-cB0" secondAttribute="centerX" id="msS-1c-DF6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="certificateLabel" destination="RzA-3R-OFb" id="HxY-wY-FjW"/>
+                        <outlet property="hostLabel" destination="jcT-JE-cB0" id="vNN-2q-H3z"/>
+                        <outlet property="userNameLabel" destination="R71-kY-Tdg" id="9TN-dc-vMf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="700" y="345"/>
         </scene>
-        <!--Tasks View Controller-->
+        <!--Tasks-->
         <scene sceneID="M22-eC-qgJ">
             <objects>
-                <viewController id="bzs-xH-30n" customClass="TasksViewController" customModule="Phabric_Later" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TasksViewController" id="bzs-xH-30n" customClass="TasksViewController" customModule="Phabric_Later" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OS7-W7-Sy8"/>
                         <viewControllerLayoutGuide type="bottom" id="lcu-DO-W5R"/>
@@ -67,11 +75,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="78" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qQH-Ra-Q8L">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qQH-Ra-Q8L">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="TaskTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskTableViewCell" rowHeight="78" id="jJ3-lJ-DJP" customClass="TaskTableViewCell" customModule="Phabric_Later" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="TaskTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskTableViewCell" rowHeight="76" id="jJ3-lJ-DJP" customClass="TaskTableViewCell" customModule="Phabric_Later" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jJ3-lJ-DJP" id="eoY-4o-MgV">
@@ -90,7 +98,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" misplaced="YES" text="This is still a WIP patch but I would like to get feedbacks sooner." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0K2-oL-Lgd">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="This is still a WIP patch but I would like to get feedbacks sooner." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0K2-oL-Lgd">
                                                     <rect key="frame" x="66" y="32" width="290" height="14"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="10"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -129,14 +137,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="l4A-gL-Axt"/>
+                    <navigationItem key="navigationItem" title="Tasks" id="l4A-gL-Axt"/>
                     <connections>
                         <outlet property="tasksTableView" destination="qQH-Ra-Q8L" id="i3Z-ee-vyY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3M-9L-McZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2980" y="340"/>
+            <point key="canvasLocation" x="2292" y="350"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2G0-gy-n43">
@@ -154,7 +162,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YeD-lo-dzA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2168" y="340"/>
+            <point key="canvasLocation" x="1480" y="350"/>
         </scene>
     </scenes>
     <resources>

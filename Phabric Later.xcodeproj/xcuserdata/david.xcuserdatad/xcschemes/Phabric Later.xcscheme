@@ -34,6 +34,20 @@
                ReferencedContainer = "container:Phabric Later.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "638BC8271B09A66B00C33468"
+               BuildableName = "PhabricLaterTests.xctest"
+               BlueprintName = "PhabricLaterTests"
+               ReferencedContainer = "container:Phabric Later.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -49,6 +63,16 @@
                BlueprintIdentifier = "637362F11B09365800B71618"
                BuildableName = "Phabric LaterTests.xctest"
                BlueprintName = "Phabric LaterTests"
+               ReferencedContainer = "container:Phabric Later.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "638BC8271B09A66B00C33468"
+               BuildableName = "PhabricLaterTests.xctest"
+               BlueprintName = "PhabricLaterTests"
                ReferencedContainer = "container:Phabric Later.xcodeproj">
             </BuildableReference>
          </TestableReference>
