@@ -13,6 +13,8 @@ class TasksViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         self.tasksTableView.rowHeight = UITableViewAutomaticDimension
         self.tasksTableView.estimatedRowHeight = 120
+        
+        PhabricatorClient.sharedInstance.tasksForUser()
         // XXX: Load data
     }
 

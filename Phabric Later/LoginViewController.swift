@@ -16,13 +16,6 @@ class LoginViewController: UIViewController {
         let host = hostLabel.text
         let user = userNameLabel.text
         let (sessionKey, connectionID) = PhabricatorClient.sharedInstance.auth(certificate, host: host, user: user)
-        PhabricatorClient.currentUser = [
-            "certificate": certificate,
-            "host": host,
-            "user": user,
-            "sessionKey": sessionKey,
-            "connectionID": connectionID
-        ]
     }
 
 }
