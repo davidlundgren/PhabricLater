@@ -74,49 +74,58 @@ class PhabricatorClient: AFHTTPRequestOperationManager {
     }
     
     func auth(certificate: String, host: String, user: String) -> (String, Int) {
+        
+        var cert = "cwpx75gs2yhk66hhczg4qxtd4bk3bbpvqgmmrppdk2idd5hwsmp5xdbvuqm55yjeg3zd3m7ng6sbiurhpahmcx2ajha5pwz6itctbsbuxwluw5hdin3h4re6ifegakcxyigel2pajl5srrpsph32nmeduw4ynq3gpy7aoys4veohhic4un4nah6bqajizstcsd5p3q3xwelfbdy2qtdsatumrrm5wsxezzgb5jt3brhdbohkrqv7zk777hugrtu"
 
 // XXX: Implement me
         
-//        let authPath = "https://\(host)/api/conduit.connect"
-//        
-//        
-//        let authToken = ""
-//        // authToken = int(time.time())
-//        let authSignature = "\(authToken)\(certificate)".sha1()
-//        // authSignature = hashlib.sha1(str(token) + CERT).hexdigest()
-//        let host = host
-//        let user = user
-//        
-//        let clientDescription = "iOS Class Project"
-//        let clientVersion = 0
-//        let client = "Phabric Later"
-//        
-//        let connectionParameters = [
-//            "authToken": authToken,
-//            "authSignature": authSignature,
-//            "host": host,
-//            "user": user,
-//            "clientDescription": clientDescription,
-//            "clientVersion": clientVersion,
-//            "client": client
-//        ]
-//        
-//        let parameters = ["params": JSONStringify(connectionParameters), "output": "json", "__conduit__": true]
-//
-//        
-//        
-//        self.POST(authPath,
-//            parameters: parameters,
-//            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
-//                println("JSON: " + responseObject.description)
-//                // XXX: Parse sessionKey and connectionID
-//            },
-//            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
-//                println("Error: " + error.localizedDescription)
-//        })
+        let authPath = "https://\(host).com/api/conduit.connect"
+        println("authPATH \(authPath)")
         
-        let sessionKey = "mySessionKey"
-        let connectionID = 1234
+        
+        let authToken = Int(NSDate().timeIntervalSince1970)
+        let authSignature = "\(authToken)\(cert)".sha1()
+        let host = host
+        let user = user
+        
+        let clientDescription = "iOS Class Project"
+        let clientVersion = 0
+        let client = "Phabric Later"
+        
+        let connectionParameters = [
+            "authToken": authToken,
+            "authSignature": authSignature,
+            "host": host,
+            "user": user,
+            "clientDescription": clientDescription,
+            "clientVersion": clientVersion,
+            "client": client
+        ]
+        
+        let parameters = ["params": JSONStringify(connectionParameters), "output": "json", "__conduit__": true]
+
+        
+        var sessionKey = "mySessionKey"
+        var connectionID = 1234
+        self.POST(authPath,
+            parameters: parameters,
+            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+                println("JSON: " + responseObject.description)
+                if let result = responseObject.result {
+                    if let sKey = result![sessionKey] as! String! {
+                        sessionKey = sKey
+                    }
+                    if let cID = result![connectionID] as? Int {
+                        connectionID = cID
+                    }
+                }
+            },
+            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
+                println("Error: " + error.localizedDescription)
+        })
+        
+        println("COOL STUFF \((sessionKey, connectionID))")
+        
         return (sessionKey, connectionID)
     }
     

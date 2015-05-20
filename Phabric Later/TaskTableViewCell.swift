@@ -38,9 +38,9 @@ class TaskTableViewCell: UITableViewCell {
             println("Pan Began")
             
         } else if (panGestureRecognizer.state == .Changed) {
-            
-            self.topBackgroundView.center = CGPoint(x: max(basis.x + translation.x, 0.0), y: basis.y)
-            
+            if translation.x > 0 {
+                self.topBackgroundView.center = CGPoint(x: max(basis.x + translation.x, 0.0), y: basis.y)
+            }
         } else if panGestureRecognizer.state == .Ended {
             let endX = translation.x
             if velocity.x > 0 || endX > cutoff {

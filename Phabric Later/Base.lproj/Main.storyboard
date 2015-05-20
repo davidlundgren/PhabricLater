@@ -27,7 +27,7 @@
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://phabricator.host" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jcT-JE-cB0">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phabricator.host" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jcT-JE-cB0" userLabel="phabricator.host">
                                 <rect key="frame" x="156" y="223" width="289" height="30"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -41,7 +41,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vKh-Ox-HHx" kind="presentation" id="dec-yU-3h6"/>
+                                    <segue destination="vKh-Ox-HHx" kind="presentation" identifier="logInSegue" id="dec-yU-3h6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -76,7 +76,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qQH-Ra-Q8L">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qQH-Ra-Q8L">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -105,7 +105,7 @@
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-avatar" translatesAutoresizingMaskIntoConstraints="NO" id="MzF-I1-89H">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="profile-avatar" translatesAutoresizingMaskIntoConstraints="NO" id="MzF-I1-89H">
                                                             <rect key="frame" x="16" y="18" width="50" height="41"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="WSN-lP-RSh"/>
@@ -173,8 +173,16 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qQH-Ra-Q8L" firstAttribute="leading" secondItem="8ek-bU-L7j" secondAttribute="leading" id="Hoc-Yp-ItD"/>
+                            <constraint firstItem="qQH-Ra-Q8L" firstAttribute="top" secondItem="8ek-bU-L7j" secondAttribute="top" id="Kvv-07-2Q1"/>
+                            <constraint firstAttribute="trailing" secondItem="qQH-Ra-Q8L" secondAttribute="trailing" id="NjV-aR-7gx"/>
+                            <constraint firstItem="lcu-DO-W5R" firstAttribute="top" secondItem="qQH-Ra-Q8L" secondAttribute="bottom" id="gDI-6f-hdr"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tasks" id="l4A-gL-Axt"/>
+                    <navigationItem key="navigationItem" title="Tasks" id="l4A-gL-Axt">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="6VD-fe-2BH"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tasksTableView" destination="qQH-Ra-Q8L" id="i3Z-ee-vyY"/>
                     </connections>
@@ -187,7 +195,7 @@
         <!--Navigation Controller-->
         <scene sceneID="2G0-gy-n43">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vKh-Ox-HHx" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="taskNavController" automaticallyAdjustsScrollViewInsets="NO" id="vKh-Ox-HHx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GGH-hj-ha1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

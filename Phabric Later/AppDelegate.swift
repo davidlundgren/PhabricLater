@@ -8,7 +8,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         if PhabricatorClient.currentUser != nil {
-            var vc = storyBoard.instantiateViewControllerWithIdentifier("TasksViewController") as! UIViewController
+            //Need to use the segue that goes through the navigation controller
+            
+            var vc = storyBoard.instantiateViewControllerWithIdentifier("taskNavController") as! UIViewController
             window?.rootViewController = vc
         }
         return true

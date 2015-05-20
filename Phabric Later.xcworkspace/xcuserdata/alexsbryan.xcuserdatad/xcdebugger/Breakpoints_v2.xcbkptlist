@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Phabric Later/PhabricatorClient.swift"
+            timestampString = "453796008.080613"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "auth(_:host:user:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Phabric_Later.PhabricatorClient.auth (Phabric_Later.PhabricatorClient)(Swift.String, host : Swift.String, user : Swift.String) -&gt; (Swift.String, Swift.Int)"
+                  moduleName = "Phabric Later"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexsbryan/Documents/Codepath/PhabricLater/Phabric%20Later/PhabricatorClient.swift"
+                  timestampString = "453794746.648186"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "3163">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Phabric_Later.PhabricatorClient.(auth (Phabric_Later.PhabricatorClient) -&gt; (Swift.String, host : Swift.String, user : Swift.String) -&gt; (Swift.String, Swift.Int)).(closure #2)"
+                  moduleName = "Phabric Later"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexsbryan/Documents/Codepath/PhabricLater/Phabric%20Later/PhabricatorClient.swift"
+                  timestampString = "453794746.648509"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "116"
+                  endingLineNumber = "116"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
