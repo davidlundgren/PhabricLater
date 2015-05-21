@@ -124,7 +124,6 @@ class PhabricatorClient: AFHTTPRequestOperationManager {
         self.POST(reqPath,
             parameters: parameters,
             success: { (operation: AFHTTPRequestOperation!, responseObject: AnyObject!) in
-                println(responseObject.description)
                 let diffDictionaries = responseObject["result"] as! [NSDictionary]
                 let tasks = Task.tasks(array: diffDictionaries)
                 completion(tasks: tasks, error: nil)

@@ -89,19 +89,13 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sXa-6K-ljL" userLabel="Bottom Background View">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.44322823255663446" green="1" blue="0.5603974782766592" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Up6-Uo-lnU" userLabel="Top Layer Background">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Using Decorator for Selector Cache" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMB-Pz-O9z">
-                                                            <rect key="frame" x="74" y="18" width="204" height="30"/>
-                                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="12"/>
-                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="This is still a WIP patch but I would like to get feedbacks sooner." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0K2-oL-Lgd">
-                                                            <rect key="frame" x="74" y="53" width="290" height="14"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" misplaced="YES" text="This is still a WIP patch but I would like to get feedbacks sooner." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0K2-oL-Lgd">
+                                                            <rect key="frame" x="74" y="40" width="289.5" height="27"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="10"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -113,6 +107,12 @@
                                                                 <constraint firstAttribute="width" constant="50" id="yXj-Ln-UlU"/>
                                                             </constraints>
                                                         </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Using Decorator for Selector Cache" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMB-Pz-O9z">
+                                                            <rect key="frame" x="74" y="18" width="204" height="17"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="12"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <gestureRecognizers/>
@@ -167,6 +167,7 @@
                                         <connections>
                                             <outlet property="avatarImageView" destination="MzF-I1-89H" id="PYx-dp-ZqG"/>
                                             <outlet property="bottomBackgroundView" destination="sXa-6K-ljL" id="iVn-40-lBr"/>
+                                            <outlet property="descriptionLabel" destination="0K2-oL-Lgd" id="fIZ-kb-Oac"/>
                                             <outlet property="titleLabel" destination="KMB-Pz-O9z" id="0SV-Le-lvB"/>
                                             <outlet property="topBackgroundView" destination="Up6-Uo-lnU" id="ftx-e3-xod"/>
                                         </connections>

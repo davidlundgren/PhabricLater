@@ -10,6 +10,7 @@ class TaskTableViewCell: UITableViewCell {
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var topBackgroundView: UIView!
     @IBOutlet weak var bottomBackgroundView: UIView!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     weak var delegate: TaskTableViewCellDelegate?
     var panGesture: UIPanGestureRecognizer!
@@ -52,8 +53,8 @@ class TaskTableViewCell: UITableViewCell {
     
     func animateRowToNewCenter(center: CGPoint) {
         UIView.animateWithDuration(0.2, delay: 0,
-            usingSpringWithDamping: CGFloat(0.2),
-            initialSpringVelocity: CGFloat(0.1),
+            usingSpringWithDamping: CGFloat(12),
+            initialSpringVelocity: CGFloat(0.001),
             options: UIViewAnimationOptions.CurveEaseIn,
             animations: { () -> Void in
                 self.topBackgroundView.center = center

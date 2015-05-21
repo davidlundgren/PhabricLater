@@ -10,6 +10,7 @@ class TasksViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         self.tasksTableView.delegate = self
         self.tasksTableView.dataSource = self
+        self.tasksTableView.separatorStyle = UITableViewCellSeparatorStyle.None
         self.tasksTableView.reloadData()
         
         self.tasksTableView.rowHeight = UITableViewAutomaticDimension
@@ -49,6 +50,12 @@ class TasksViewController: UIViewController, UITableViewDataSource, UITableViewD
         let task = tasks![indexPath.row]
         cell.delegate = self
         cell.titleLabel.text = task.title
+        if task.descriptionText != nil {
+            cell.descriptionLabel.text = task.descriptionText
+        } else {
+            cell.descriptionLabel.text = task.summaryText
+        }
+        cell.backgroundColor = UIColor.blueColor()
         return cell
     }
     

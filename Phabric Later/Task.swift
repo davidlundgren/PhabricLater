@@ -8,6 +8,8 @@ class Task: NSObject {
     let uri: String?
     let title: String?
     let type: String?
+    let descriptionText: String?
+    let summaryText: String?
     
     init(dictionary: NSDictionary) {
         name = dictionary["name"] as? String
@@ -17,6 +19,8 @@ class Task: NSObject {
         uri = dictionary["uri"] as? String
         type = dictionary["type"] as? String
         title = dictionary["title"] as? String
+        descriptionText = dictionary["description"] as? String
+        summaryText = dictionary["summary"] as? String
     }
     
     class func tasks(#array: [NSDictionary]) -> [Task] {
