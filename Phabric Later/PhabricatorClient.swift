@@ -105,6 +105,36 @@ class PhabricatorClient: AFHTTPRequestOperationManager {
         })
     }
     
+    func diffsForUserWithCompletion(completion: (tasks: [Task]?, error: NSError?) -> ()) {
+        //Cleanup later
+        let conduit = [
+            "sessionKey": sessionKey,
+            "connectionID": connectionID
+        ]
+        let connectionParameters = [
+            "status": "status-open",
+            "responsibleUsers": [userPHID],
+            "__conduit__": conduit
+        ]
+        
+        let reqPath = "https://\(host).com/api/differential.query"
+        
+        let parameters = ["params": JSONStringify(connectionParameters), "output": "json"]
+        
+        self.POST(reqPath,
+            parameters: parameters,
+            success: { (operation: AFHTTPRequestOperation!, responseObject: AnyObject!) in
+                println(responseObject.description)
+                let diffDictionaries = responseObject["result"] as! [NSDictionary]
+                let tasks = Task.tasks(array: diffDictionaries)
+                completion(tasks: tasks, error: nil)
+            },
+            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
+                println("Error in tasksForUser(): " + error.localizedDescription)
+                completion(tasks: nil, error: error)
+        })
+    }
+    
     func loginWithCompletion(completion: (result: NSDictionary?, error: NSError?) -> ()) {
 
         let authPath = "https://\(host).com/api/conduit.connect"

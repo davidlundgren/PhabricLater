@@ -24,6 +24,16 @@ class TasksViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
         }
         
+        
+        PhabricatorClient.sharedInstance.diffsForUserWithCompletion { (tasks, error) -> () in
+            if tasks != nil {
+                self.tasks?.extend(tasks!)
+                self.tasksTableView.reloadData()
+            } else {
+                println("WHOA didn't load any diffs, maybe you should go home early.")
+            }
+        }
+        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

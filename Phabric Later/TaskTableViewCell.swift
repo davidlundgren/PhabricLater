@@ -17,7 +17,7 @@ class TaskTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
         topBackgroundView.userInteractionEnabled = true
         panGesture = UIPanGestureRecognizer(target: self, action: "onRowPanGesture:")
         topBackgroundView.addGestureRecognizer(panGesture)
@@ -34,16 +34,13 @@ class TaskTableViewCell: UITableViewCell {
         var basis = bottomBackgroundView.center
         var cutoff = basis.x
         
-        if panGestureRecognizer.state == .Began {
-            println("Pan Began")
-            
-        } else if (panGestureRecognizer.state == .Changed) {
+        if (panGestureRecognizer.state == .Changed) {
             if translation.x > 0 {
                 self.topBackgroundView.center = CGPoint(x: max(basis.x + translation.x, 0.0), y: basis.y)
             }
         } else if panGestureRecognizer.state == .Ended {
             let endX = translation.x
-            if velocity.x > 0 || endX > cutoff {
+            if velocity.x > 0 && endX > cutoff {
                 self.delegate?.taskTableViewCell(self, didSwipe: true)
                 let offScreenPoint = CGPoint(x: basis.x * 3, y: basis.y)
                 self.animateRowToNewCenter(offScreenPoint)
