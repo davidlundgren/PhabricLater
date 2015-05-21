@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -41,7 +41,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vKh-Ox-HHx" kind="presentation" identifier="logInSegue" id="dec-yU-3h6"/>
+                                    <action selector="onLoginClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="haY-vP-2Ss"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -58,6 +58,7 @@
                         <outlet property="certificateLabel" destination="RzA-3R-OFb" id="HxY-wY-FjW"/>
                         <outlet property="hostLabel" destination="jcT-JE-cB0" id="vNN-2q-H3z"/>
                         <outlet property="userNameLabel" destination="R71-kY-Tdg" id="9TN-dc-vMf"/>
+                        <segue destination="vKh-Ox-HHx" kind="show" identifier="loginSegue" id="UfP-TU-ONw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -93,7 +94,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Up6-Uo-lnU" userLabel="Top Layer Background">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Using Decorator for Selector Cache" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMB-Pz-O9z">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Using Decorator for Selector Cache" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMB-Pz-O9z">
                                                             <rect key="frame" x="74" y="18" width="204" height="30"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="12"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -125,6 +126,7 @@
                                                         <constraint firstAttribute="bottom" secondItem="0K2-oL-Lgd" secondAttribute="bottom" constant="8" id="i1u-gx-jGC"/>
                                                         <constraint firstItem="MzF-I1-89H" firstAttribute="top" secondItem="Up6-Uo-lnU" secondAttribute="topMargin" constant="10" id="oG6-q2-T1Y"/>
                                                         <constraint firstAttribute="bottomMargin" secondItem="MzF-I1-89H" secondAttribute="bottom" constant="8" id="rcU-3T-4oU"/>
+                                                        <constraint firstAttribute="trailing" secondItem="KMB-Pz-O9z" secondAttribute="trailing" constant="8" id="zWf-6d-5AF"/>
                                                     </constraints>
                                                     <connections>
                                                         <outletCollection property="gestureRecognizers" destination="py5-1s-Umv" appends="YES" id="Vf9-9T-eJK"/>
@@ -180,9 +182,7 @@
                             <constraint firstItem="lcu-DO-W5R" firstAttribute="top" secondItem="qQH-Ra-Q8L" secondAttribute="bottom" id="gDI-6f-hdr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tasks" id="l4A-gL-Axt">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="6VD-fe-2BH"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Tasks" id="l4A-gL-Axt"/>
                     <connections>
                         <outlet property="tasksTableView" destination="qQH-Ra-Q8L" id="i3Z-ee-vyY"/>
                     </connections>

@@ -2,7 +2,6 @@ import Foundation
 import UIKit
 
 private func JSONStringify(value: AnyObject, prettyPrinted: Bool = false) -> String {
-    println(value)
     var options = prettyPrinted ? NSJSONWritingOptions.PrettyPrinted : nil
     if NSJSONSerialization.isValidJSONObject(value) {
         if let data = NSJSONSerialization.dataWithJSONObject(value, options: options, error: nil) {
@@ -28,6 +27,8 @@ extension String {
 
 var _currentUser: NSDictionary?
 let currentUserKey = "kCurrentUser"
+
+let UserDidAuthenticate = "UserDidAuthenticate"
 
 // Pull from user
 var certificate: String!
@@ -56,20 +57,20 @@ class PhabricatorClient: AFHTTPRequestOperationManager {
         return parameters
     }
     
-    func showUser() {
-        println("input cert:\(certificate)")
-        let parameters = buildParameterDictionary([String: AnyObject]())
-        self.POST("https://\(host).com/api/user.whoami",
-            parameters: parameters,
-            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
-                println("JSON: " + responseObject.description)
-            },
-            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
-                println("Error: " + error.localizedDescription)
-        })
-    }
+//    func showUser() {
+//        println("input cert:\(certificate)")
+//        let parameters = buildParameterDictionary([String: AnyObject]())
+//        self.POST("https://\(host).com/api/user.whoami",
+//            parameters: parameters,
+//            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+//                println("JSON: " + responseObject.description)
+//            },
+//            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
+//                println("Error: " + error.localizedDescription)
+//        })
+//    }
     
-    func tasksForUser() -> [Task] {
+    func tasksForUserWithCompletion(completion: (tasks: [Task]?, error: NSError?) -> ()) {
         //Cleanup later
         let conduit = [
             "sessionKey": sessionKey,
@@ -87,27 +88,29 @@ class PhabricatorClient: AFHTTPRequestOperationManager {
         
         self.POST(reqPath,
             parameters: parameters,
-            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
-                println("JSON: " + responseObject.description)
-                if let result = responseObject["result"] as? [NSDictionary] {
-                    //TODO send in completion callback so we can saturate some store with the results, since we can't just return at the end of the function because the async call won't be done yet
-                    Task.tasks(array: result)
+            success: { (operation: AFHTTPRequestOperation!, responseObject: AnyObject!) in
+                let result = responseObject["result"] as! NSDictionary
+                var taskDictionaries = [NSDictionary]()
+                
+                for (phabricatorID, taskData) in result {
+                    taskDictionaries.append(taskData as! NSDictionary)
                 }
+                
+                let tasks = Task.tasks(array: taskDictionaries)
+                completion(tasks: tasks, error: nil)
             },
             failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
-                println("Error: " + error.localizedDescription)
+                println("Error in tasksForUser(): " + error.localizedDescription)
+                completion(tasks: nil, error: error)
         })
-        //TODO: Make this work right, not set up for async yet
-        return [Task(dictionary: [String: String]())]
     }
     
-    func auth(certificate: String, host: String, user: String) -> (String, Int) {
+    func loginWithCompletion(completion: (result: NSDictionary?, error: NSError?) -> ()) {
+
         let authPath = "https://\(host).com/api/conduit.connect"
         
         let authToken = Int(NSDate().timeIntervalSince1970)
         let authSignature = "\(authToken)\(certificate)".sha1()
-        let host = host
-        let user = user
         
         let clientDescription = "iOS Class Project"
         let clientVersion = 0
@@ -131,32 +134,15 @@ class PhabricatorClient: AFHTTPRequestOperationManager {
         self.POST(authPath,
             parameters: parameters,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
-                println("JSON: " + responseObject.description)
-                if let result = responseObject["result"] {
-                    if let sKey = result!["sessionKey"] as! String! {
-                        sessionKey = sKey
-                    }
-                    if let cID = result!["connectionID"] as? Int {
-                        connectionID = cID
-                    }
-                    if let pHID = result!["userPHID"] as! String! {
-                        userPHID = pHID
-                    }
-                }
-                PhabricatorClient.currentUser = [
-                    "certificate": certificate,
-                    "host": host,
-                    "user": user,
-                    "sessionKey": sessionKey,
-                    "connectionID": connectionID,
-                    "userPHID": userPHID
-                ]
+                //println("AUTHED: " + responseObject.description)
+                NSNotificationCenter.defaultCenter().postNotificationName(UserDidAuthenticate, object: nil)
+                // Phuck error handling, this is Phabricator
+                completion(result: responseObject["result"] as! NSDictionary, error: nil)
             },
             failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
-                println("Error: " + error.localizedDescription)
+                println("Error in authenticateWithCompletion(): " + error.localizedDescription)
+                completion(result: nil, error: error)
         })
-        
-        return (sessionKey, connectionID)
     }
     
     class var currentUser: NSDictionary? {
@@ -172,11 +158,12 @@ class PhabricatorClient: AFHTTPRequestOperationManager {
                     sessionKey = dictionary["sessionKey"] as? String
                     connectionID = dictionary["connectionID"] as! Int
                     userPHID = dictionary["userPHID"] as? String
-                    println("certificate: \(certificate)")
-                    println("host: \(host)")
-                    println("user: \(user)")
-                    println("sessionKey: \(sessionKey)")
-                    println("connectionID: \(connectionID)")
+//                    println("Loaded user from NSUserDefaults:")
+//                    println("\tcertificate: \(certificate)")
+//                    println("\thost: \(host)")
+//                    println("\tuser: \(user)")
+//                    println("\tsessionKey: \(sessionKey)")
+//                    println("\tconnectionID: \(connectionID)")
                 }
             }
             return _currentUser
@@ -185,12 +172,10 @@ class PhabricatorClient: AFHTTPRequestOperationManager {
         set(user) {
             _currentUser = user
             if _currentUser != nil {
-                println("OK")
                 var data = NSJSONSerialization.dataWithJSONObject(user!, options: nil, error: nil)
                 NSUserDefaults.standardUserDefaults().setObject(data, forKey: currentUserKey)
                 
             } else {
-                println("WAT?")
                 NSUserDefaults.standardUserDefaults().setObject(nil, forKey: currentUserKey)
             }
             NSUserDefaults.standardUserDefaults().synchronize()

@@ -1,42 +1,51 @@
 import UIKit
 
 class TasksViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TaskTableViewCellDelegate {
-
+    
     @IBOutlet weak var tasksTableView: UITableView!
-    //TODO: Define this better when we know what tasks look like
-    var tasks = [AnyObject]()
+    var tasks: [Task]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.tasksTableView.delegate = self
         self.tasksTableView.dataSource = self
+        self.tasksTableView.reloadData()
         
         self.tasksTableView.rowHeight = UITableViewAutomaticDimension
         self.tasksTableView.estimatedRowHeight = 120
         
-        PhabricatorClient.sharedInstance.tasksForUser()
-        // XXX: Load data
+        PhabricatorClient.sharedInstance.tasksForUserWithCompletion { (tasks, error) -> () in
+            if tasks != nil {
+                self.tasks = tasks!
+                self.tasksTableView.reloadData()
+            } else {
+                println("WHOA didn't load any tasks, maybe you should go home early.")
+            }
+        }
+        
     }
-
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // XXX
-        return 5
+        if tasks != nil {
+            return tasks!.count
+        } else {
+            return 0
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        // XXX
         let cell = tableView.dequeueReusableCellWithIdentifier("TaskTableViewCell", forIndexPath: indexPath) as! TaskTableViewCell
-        
+        let task = tasks![indexPath.row]
         cell.delegate = self
-        
+        cell.titleLabel.text = task.title
         return cell
     }
     
     func taskTableViewCell(taskTableViewCell: TaskTableViewCell, didSwipe value: Bool) {
         if let tableIndex = self.tasksTableView.indexPathForCell(taskTableViewCell)?.row {
-//            var task = self.tasks[tableIndex]
-            // XXX: Do some stuff with the task given that it's been swiped
-            println("finished swiping in Delegate Function at index \(tableIndex)")
+            tasks?.removeAtIndex(tableIndex)
+            self.tasksTableView.reloadData()
         }
         
     }

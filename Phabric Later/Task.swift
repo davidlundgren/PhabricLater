@@ -6,6 +6,7 @@ class Task: NSObject {
     let fullName: String?
     let status: String?
     let uri: String?
+    let title: String?
     let type: String?
     
     init(dictionary: NSDictionary) {
@@ -15,6 +16,7 @@ class Task: NSObject {
         status = dictionary["status"] as? String
         uri = dictionary["uri"] as? String
         type = dictionary["type"] as? String
+        title = dictionary["title"] as? String
     }
     
     class func tasks(#array: [NSDictionary]) -> [Task] {
